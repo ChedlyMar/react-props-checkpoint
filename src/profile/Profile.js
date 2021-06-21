@@ -9,6 +9,14 @@ function Profile(props) {
   };
   const professionStyle = { color: "#2a2a2a", fontFamily: "MontSerrat" };
   const bioStyle = { color: "#2a2a2a", width: "70%", margin: "auto" };
+  const btnStyle = {
+    padding: "2em 4em",
+    marginTop: "2em",
+    backgroundColor: "#61DBFB",
+    fontFamily: "MontSerrat",
+    fontSize: "1em",
+    fontWeight: "bolder",
+  };
 
   return (
     <div>
@@ -17,7 +25,7 @@ function Profile(props) {
       <h2 style={professionStyle}>Profession: {props.profession}</h2>
       <p style={bioStyle}>bio: {props.bio}</p>
 
-      <button onClick={() => props.handleName(props.fullName)}>
+      <button style={btnStyle} onClick={() => props.handleName(props.fullName)}>
         click me!
       </button>
     </div>
